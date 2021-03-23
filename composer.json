@@ -1,8 +1,8 @@
 {
-	"description": "The CodeIgniter framework",
-	"name": "codeigniter/framework",
+	"description": "The CodeIgniter framework + Routing by Annotation",
+	"name": "hyunmui/ci-annotation-routing",
 	"type": "project",
-	"homepage": "https://codeigniter.com",
+	"homepage": "https://github.com/hyunmui",
 	"license": "MIT",
 	"support": {
 		"forum": "http://forum.codeigniter.com/",
@@ -10,14 +10,22 @@
 		"slack": "https://codeigniterchat.slack.com",
 		"source": "https://github.com/bcit-ci/CodeIgniter"
 	},
+	"autoload": {
+		"psr-4": {
+			"FlexibleDev\\": "flexibledev/"
+		}
+	},
 	"require": {
-		"php": ">=5.3.7"
+		"php": ">=7.4",
+		"symfony/string": "^5.2",
+		"illuminate/collections": "^8.33",
+		"doctrine/inflector": "^2.0",
+		"doctrine/annotations": "^1.12"
 	},
 	"suggest": {
 		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
 	},
 	"require-dev": {
-		"mikey179/vfsstream": "1.1.*",
-		"phpunit/phpunit": "4.* || 5.*"
+		"phpunit/phpunit": ">=4.0"
 	}
 }
